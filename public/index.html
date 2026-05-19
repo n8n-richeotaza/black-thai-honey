@@ -16,23 +16,29 @@
     <link rel="stylesheet" href="/css/style.css">
     <style>
         .hero-visual-container {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 340px;
-            height: 500px;
-            display: none;
+            position: relative;
+            right: auto;
+            top: auto;
+            transform: none;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            aspect-ratio: 0.68;
+            display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1;
             pointer-events: none;
+            margin: 0 auto 32px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: radial-gradient(ellipse at center, rgba(42,21,0,0.6) 0%, transparent 70%);
         }
-        .hero-glow {
+        .hero-video-glow {
             position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(224,185,79,0.12) 0%, transparent 70%);
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle at center, rgba(224,185,79,0.3) 0%, rgba(201,169,110,0.1) 35%, transparent 65%);
             border-radius: 50%;
             top: 50%;
             left: 50%;
@@ -47,7 +53,9 @@
             position: relative;
             z-index: 1;
             opacity: 1;
-            box-shadow: 0 0 60px rgba(224,185,79,0.15);
+            box-shadow:
+                0 0 60px rgba(224,185,79,0.18),
+                0 0 120px rgba(201,169,110,0.08);
         }
         .hero-title-glow {
             text-shadow: 0 0 40px rgba(224,185,79,0.15), 0 2px 10px rgba(0,0,0,0.5);
@@ -57,7 +65,17 @@
             .hero-content { text-align: left; align-items: flex-start; }
             .hero-cta { justify-content: flex-start; }
             .hero-stats { justify-content: flex-start; }
-            .hero-visual-container { display: flex; }
+            .hero-visual-container {
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 340px;
+                height: 500px;
+                margin: 0;
+                max-width: none;
+                aspect-ratio: auto;
+            }
         }
         .faq-item {
             border-bottom: 1px solid var(--border);
@@ -192,6 +210,12 @@
                     <div class="hero-gradient"></div>
                     <div class="hero-particles" id="heroParticles"></div>
                 </div>
+                <div class="hero-visual-container">
+                    <div class="hero-video-glow"></div>
+                    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+                        <source src="/Scene-4b.mp4" type="video/mp4">
+                    </video>
+                </div>
                 <div class="hero-content">
                     <div class="hero-badge">Honeypacks Gold Collection</div>
                     <h1 class="hero-title hero-title-glow">
@@ -208,12 +232,6 @@
                         <div class="stat"><span class="stat-value">50K+</span><span class="stat-label">Happy Men</span></div>
                         <div class="stat"><span class="stat-value">4.9</span><span class="stat-label">Avg Rating</span></div>
                     </div>
-                </div>
-                <div class="hero-visual-container">
-                    <div class="hero-glow"></div>
-                    <video class="hero-video" autoplay muted loop playsinline preload="auto">
-                        <source src="/Scene-4b.mp4" type="video/mp4">
-                    </video>
                 </div>
                 <div class="hero-scroll">
                     <span>Scroll to explore</span>

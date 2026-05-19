@@ -482,6 +482,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -498,8 +499,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     inset: 0;
     background: 
+        radial-gradient(ellipse at 85% 50%, rgba(224,185,79,0.12) 0%, transparent 50%),
         radial-gradient(ellipse at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(201, 169, 110, 0.05) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 100%, rgba(201, 169, 110, 0.03) 0%, transparent 50%);
 }
 
