@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Thai Honey | Premium Honey Packs for Men</title>
+    <meta name="description" content="Shop premium black thai honey packs for men. The ultimate royal honey alternative with natural ingredients. Read honey packs reviews, learn how long honey packs take to kick in, and explore our gold collection.">
+    <meta name="keywords" content="black thai honey, honey packs for men, black thai honey packs, honeypacks gold, honey packs reviews, how long do honey packs take to kick in, black thai honey ingredients, honey packs side effects, royal honey alternative">
+    <meta name="author" content="Black Thai Honey">
+    <meta property="og:title" content="Black Thai Honey | Premium Honey Packs for Men">
+    <meta property="og:description" content="Premium black thai honey packs. Fast-acting, natural ingredients, discreet shipping.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .hero-visual-container {
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 340px;
+            height: 500px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-pack-svg {
+            width: 280px;
+            height: auto;
+            filter: drop-shadow(0 20px 60px rgba(224,185,79,0.25));
+            animation: floatPack 6s ease-in-out infinite;
+        }
+        @keyframes floatPack {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        .hero-glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(224,185,79,0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 0;
+        }
+        .hero-title-glow {
+            text-shadow: 0 0 40px rgba(224,185,79,0.15), 0 2px 10px rgba(0,0,0,0.5);
+        }
+        @media (min-width: 1024px) {
+            .hero { justify-content: flex-start; padding-left: 8%; }
+            .hero-content { text-align: left; align-items: flex-start; }
+            .hero-cta { justify-content: flex-start; }
+            .hero-stats { justify-content: flex-start; }
+            .hero-visual-container { display: flex; }
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-top: 8px;
+        }
+        .faq-toggle {
+            color: var(--accent);
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        .seo-section {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+        .seo-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .seo-content strong {
+            color: var(--text-primary);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" onclick="showSection('home')" style="font-size: 22px; letter-spacing: 3px;">BLACK THAI <span style="color: var(--accent);">HONEY</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#" onclick="showSection('home')">Home</a>
+                <a href="#" onclick="showSection('shop')">Shop</a>
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('contact')">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn search-btn" onclick="toggleSearch()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn" onclick="toggleCart()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-bar" id="searchBar">
+            <div class="container">
+                <input type="text" placeholder="Search honey packs..." id="searchInput" onkeyup="handleSearch(event)">
+                <button onclick="toggleSearch()">Close</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="showSection('home'); toggleMobileMenu()">Home</a>
+        <a href="#" onclick="showSection('shop'); toggleMobileMenu()">Shop</a>
+        <a href="#" onclick="showSection('about'); toggleMobileMenu()">About</a>
+        <a href="#" onclick="showSection('contact'); toggleMobileMenu()">Contact</a>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" onclick="toggleCart()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <p>Your cart is empty</p>
+                <button class="btn btn-primary" onclick="toggleCart(); showSection('shop')">Start Shopping</button>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <div class="cart-shipping"><span>Shipping</span><span id="cartShipping">Calculated at checkout</span></div>
+            <div class="cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+            <button class="btn btn-primary btn-full" onclick="showCheckout()">Proceed to Checkout</button>
+            <button class="btn btn-outline btn-full" onclick="toggleCart(); showSection('shop')">Continue Shopping</button>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <main id="mainContent">
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-bg">
+                    <div class="hero-gradient"></div>
+                    <div class="hero-particles" id="heroParticles"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="hero-badge">Honeypacks Gold Collection</div>
+                    <h1 class="hero-title hero-title-glow">
+                        <span class="line">Premium Black</span>
+                        <span class="line accent">Thai Honey</span>
+                    </h1>
+                    <p class="hero-subtitle">The ultimate <strong style="color: #fff;">royal honey alternative</strong> crafted for men who demand performance. Our black thai honey packs are fast-acting, discreet, and made with premium natural ingredients.</p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-lg" onclick="showSection('shop')">Shop Honey Packs</button>
+                        <button class="btn btn-outline btn-lg" onclick="scrollToFeatured()">View Collection</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat"><span class="stat-value" id="statProducts">15+</span><span class="stat-label">Products</span></div>
+                        <div class="stat"><span class="stat-value">50K+</span><span class="stat-label">Happy Men</span></div>
+                        <div class="stat"><span class="stat-value">4.9</span><span class="stat-label">Avg Rating</span></div>
+                    </div>
+                </div>
+                <div class="hero-visual-container">
+                    <div class="hero-glow"></div>
+                    <svg class="hero-pack-svg" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="packGold" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#c9a96e"/>
+                                <stop offset="50%" stop-color="#e0b94f"/>
+                                <stop offset="100%" stop-color="#c9a96e"/>
+                            </linearGradient>
+                            <linearGradient id="goldDrip" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#e0b94f"/>
+                                <stop offset="100%" stop-color="#b8963f" stop-opacity="0.6"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Sachet body -->
+                        <rect x="35" y="20" width="130" height="200" rx="12" ry="12" fill="#0a0a0a" stroke="url(#packGold)" stroke-width="3"/>
+                        <!-- Tear notch -->
+                        <path d="M85,20 L100,32 L115,20" fill="#0a0a0a" stroke="url(#packGold)" stroke-width="2"/>
+                        <!-- Inner seal line -->
+                        <line x1="35" y1="60" x2="165" y2="60" stroke="url(#packGold)" stroke-width="1" opacity="0.5"/>
+                        <!-- Honey drop icon -->
+                        <path d="M100,95 C100,95 115,115 115,130 C115,145 100,155 100,155 C100,155 85,145 85,130 C85,115 100,95 100,95 Z" fill="url(#packGold)" opacity="0.9"/>
+                        <ellipse cx="100" cy="90" rx="10" ry="5" fill="url(#packGold)" filter="url(#glow)"/>
+                        <!-- Text on pack -->
+                        <text x="100" y="185" text-anchor="middle" font-family="'Playfair Display', serif" font-size="14" fill="#e0b94f" letter-spacing="2">BTH GOLD</text>
+                        <text x="100" y="205" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" fill="#a0a0a0" letter-spacing="1">PREMIUM</text>
+                        <!-- Dripping honey -->
+                        <path d="M100,220 Q100,240 100,255 Q100,265 100,270 Q100,275 100,275" fill="none" stroke="url(#goldDrip)" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="100" cy="278" r="5" fill="url(#goldDrip)"/>
+                        <!-- Gold particles around pack -->
+                        <circle cx="25" cy="80" r="2" fill="#e0b94f" opacity="0.6"/>
+                        <circle cx="175" cy="120" r="1.5" fill="#e0b94f" opacity="0.5"/>
+                        <circle cx="30" cy="180" r="2" fill="#e0b94f" opacity="0.4"/>
+                        <circle cx="170" cy="40" r="2.5" fill="#e0b94f" opacity="0.7"/>
+                    </svg>
+                </div>
+                <div class="hero-scroll">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+
+            <div class="categories-section" id="featuredSection">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Collections</span>
+                        <h2>Shop by Category</h2>
+                        <p>Handpicked selections for every need — single packs, multi-pack boxes, and exclusive bundles</p>
+                    </div>
+                    <div class="categories-grid">
+                        <div class="category-card large" onclick="showCategory('single-packs')">
+                                    <div class="category-image" style="background-image: url('/images/cat-singles.svg');"></div>
+                            <div class="category-overlay"></div>
+                            <div class="category-content">
+                                <h3>Single Packs</h3>
+                                <p>Individual black thai honey packs for on-the-go</p>
+                                <span class="category-link">Shop Now →</span>
+                            </div>
+                        </div>
+                        <div class="category-card" onclick="showCategory('boxes')">
+                                    <div class="category-image" style="background-image: url('/images/cat-boxes.svg');"></div>
+                            <div class="category-overlay"></div>
+                            <div class="category-content">
+                                <h3>Multi-Pack Boxes</h3>
+                                <p>Value boxes with 3, 5, or 10 packs</p>
+                                <span class="category-link">Shop Now →</span>
+                            </div>
+                        </div>
+                        <div class="category-card" onclick="showCategory('bundles')">
+                                    <div class="category-image" style="background-image: url('/images/cat-bundles.svg');"></div>
+                            <div class="category-overlay"></div>
+                            <div class="category-content">
+                                <h3>Gift Bundles</h3>
+                                <p>Curated bundles and starter kits</p>
+                                <span class="category-link">Shop Now →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-products">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Best Sellers</span>
+                        <h2>Featured Black Thai Honey Packs</h2>
+                        <p>Our most trusted honey packs for men, backed by thousands of reviews</p>
+                    </div>
+                    <div class="products-grid" id="featuredProducts">
+                        <div class="loading-spinner"><div class="spinner"></div><p>Loading honey packs...</p></div>
+                    </div>
+                    <div class="section-cta">
+                        <button class="btn btn-outline" onclick="showSection('shop')">View All Products</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                <div class="container">
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                            </div>
+                            <h4>Fast-Acting Formula</h4>
+                            <p>Feel the difference quickly. Learn how long honey packs take to kick in — typically within 30-60 minutes.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <h4>Natural Ingredients</h4>
+                            <p>Premium black thai honey ingredients sourced ethically. Pure honey with traditional herbal extracts.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                            </div>
+                            <h4>Discreet Shipping</h4>
+                            <p>Plain packaging with no labels. Your privacy is our priority on every black thai honey order.</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+                            </div>
+                            <h4>Trusted Reviews</h4>
+                            <p>Join 50,000+ men. Read real honey packs reviews from verified buyers and see why we are rated 4.9 stars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seo-section">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">FAQ & Info</span>
+                        <h2>Everything About Honey Packs</h2>
+                        <p>Common questions about black thai honey packs answered</p>
+                    </div>
+                    <div class="seo-content" style="max-width: 800px; margin: 0 auto;">
+                        <div class="faq-item active">
+                            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                                How long do honey packs take to kick in?
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Most men feel the effects of our black thai honey packs within <strong>30 to 60 minutes</strong> after consumption. Results vary based on metabolism, body weight, and whether taken on an empty stomach. For best results, consume one pack 45 minutes before activity with a small glass of water.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                                What are the black thai honey ingredients?
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Our black thai honey is made from <strong>pure Thai forest honey</strong> blended with traditional herbal extracts including ginseng, tongkat ali, and royal jelly. Every batch is lab-tested for purity. We never use synthetic additives — just nature's most potent ingredients trusted for centuries.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                                Are there any honey packs side effects?
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Our honey packs for men are generally well-tolerated. Mild effects may include warmth or slight flushing as circulation improves. Those with bee product allergies or heart conditions should consult a physician first. Always follow the recommended dosage of one pack per 24 hours.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                                Why choose Black Thai Honey as a royal honey alternative?
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Black Thai Honey offers a <strong>premium royal honey alternative</strong> with stronger potency, better taste, and transparent sourcing. Unlike generic royal honey, our honeypacks gold line uses rare black forest honey from Thailand's highlands — richer in antioxidants and enzymes than standard varieties.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                                What do honey packs reviews say?
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                Verified buyers consistently rate our black thai honey packs <strong>4.8 to 5.0 stars</strong>. Most honey packs reviews highlight fast delivery, discreet packaging, reliable effects, and excellent taste compared to competitors. Over 50,000 men have made the switch and stay loyal.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-content">
+                        <h2>Join the Honeypacks Gold Club</h2>
+                        <p>Get exclusive access to new black thai honey drops, member-only discounts, and limited edition boxes.</p>
+                        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                            <input type="email" placeholder="Enter your email" id="newsletterEmail" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="section">
+            <div class="shop-header">
+                <div class="container">
+                    <h1>Shop All Honey Packs</h1>
+                    <p>Premium black thai honey packs and boxes for men — single serves, value packs, and gift bundles</p>
+                </div>
+            </div>
+            <div class="shop-filters">
+                <div class="container">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all" onclick="filterProducts('all')">All</button>
+                        <button class="filter-btn" data-filter="single-packs" onclick="filterProducts('single-packs')">Single Packs</button>
+                        <button class="filter-btn" data-filter="boxes" onclick="filterProducts('boxes')">Boxes</button>
+                        <button class="filter-btn" data-filter="bundles" onclick="filterProducts('bundles')">Bundles</button>
+                    </div>
+                    <div class="sort-group">
+                        <select id="sortSelect" onchange="sortProducts(this.value)">
+                            <option value="featured">Featured</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Top Rated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="products-grid" id="shopProducts">
+                    <div class="loading-spinner"><div class="spinner"></div><p>Loading honey packs...</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="about-hero">
+                <div class="container">
+                    <h1>The Black Thai Honey Story</h1>
+                    <p>Heritage, potency, and trust — in every single pack.</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-block">
+                        <h2>The Origin</h2>
+                        <p>Black Thai Honey was born from a single mission: bring the world's most potent natural honey to men who refuse to compromise. Sourced from the untouched highland forests of Northern Thailand, our black thai honey is darker, richer, and more nutrient-dense than any conventional honey on the market.</p>
+                        <p>We don't follow trends. We follow centuries-old traditions of Thai herbalists who understood that nature provides everything a man needs to perform at his peak.</p>
+                    </div>
+                    <div class="about-block">
+                        <h2>Our Process</h2>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-num">01</span>
+                                <h4>Source</h4>
+                                <p>We partner with ethical Thai beekeepers in remote highland regions where bees feed on wild forest flowers.</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">02</span>
+                                <h4>Blend</h4>
+                                <p>Each batch is hand-blended with ginseng, tongkat ali, and royal jelly using proprietary ratios perfected over years.</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">03</span>
+                                <h4>Test</h4>
+                                <p>Independent labs verify purity, potency, and safety before any honey pack reaches our warehouse.</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-num">04</span>
+                                <h4>Deliver</h4>
+                                <p>Discreet, fast shipping worldwide. Plain packaging guarantees your privacy on every order.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h1>Get in Touch</h1>
+                        <p>Have questions about our black thai honey packs? Whether it's about ingredients, shipping, or bulk orders — we are here to help.</p>
+                        <div class="contact-details">
+                            <div class="contact-item"><strong>Email</strong><span>support@blackthaihoney.com</span></div>
+                            <div class="contact-item"><strong>Phone</strong><span>+1 (888) 555-HONEY</span></div>
+                            <div class="contact-item"><strong>HQ</strong><span>Phuket, Thailand<br>USA Fulfillment: Miami, FL</span></div>
+                        </div>
+                    </div>
+                    <form class="contact-form" onsubmit="handleContact(event)">
+                        <div class="form-group"><label>Name</label><input type="text" id="contactName" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" id="contactEmail" required></div>
+                        <div class="form-group"><label>Subject</label><input type="text" id="contactSubject" required></div>
+                        <div class="form-group"><label>Message</label><textarea rows="5" id="contactMessage" required></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="productModal" onclick="closeProductModal(event)"></div>
+    <div class="product-modal" id="productModalContent">
+        <button class="modal-close" onclick="closeProductModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-body" id="productModalBody"></div>
+    </div>
+
+    <div class="modal-overlay" id="checkoutModal" onclick="closeCheckoutModal(event)"></div>
+    <div class="checkout-modal" id="checkoutModalContent">
+        <button class="modal-close" onclick="closeCheckoutModal()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="checkout-body" id="checkoutBody"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" onclick="showSection('home')" style="font-size: 20px; letter-spacing: 2px;">BLACK THAI <span style="color: var(--accent);">HONEY</span></a>
+                    <p>Premium black thai honey packs for men. The trusted royal honey alternative since 2020.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <a href="#" onclick="showSection('shop')">All Honey Packs</a>
+                    <a href="#" onclick="filterProducts('single-packs')">Single Packs</a>
+                    <a href="#" onclick="filterProducts('boxes')">Boxes</a>
+                    <a href="#" onclick="filterProducts('bundles')">Bundles</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#" onclick="showSection('about')">About</a>
+                    <a href="#" onclick="showSection('contact')">Contact</a>
+                    <a href="#">Wholesale</a>
+                    <a href="#">Affiliates</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2026 Black Thai Honey. All rights reserved. These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
