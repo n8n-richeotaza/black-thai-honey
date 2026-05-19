@@ -316,7 +316,7 @@ app.use((req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Black Thai Honey API running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Black Thai Honey API running on port ${PORT}`);
     console.log(`Admin password: ${process.env.ADMIN_HASH ? '(set via env)' : 'admin123'}`);
 });
